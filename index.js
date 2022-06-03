@@ -3,7 +3,7 @@ let mongoose = require('mongoose');
 let cors = require('cors');
 let bodyParser = require('body-parser');
 // Express Route
-const studentRoute = require('../serveur-mern-crud/routes/student.route')
+// const studentRoute = require('../serveur-mern-crud/routes/student.route')
 // Connecting mongoDB Database
 mongoose
     .connect('mongodb+srv://larry109:toky221000@cluster0.lwrxn.mongodb.net/crudMern')
@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(cors());
-app.use('/students', studentRoute)
+// app.use('/students', studentRoute)
 
 // PORT
 const port = process.env.PORT || 4000;

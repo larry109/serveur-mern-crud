@@ -3,10 +3,11 @@ let mongoose = require('mongoose');
 let cors = require('cors');
 let bodyParser = require('body-parser');
 // Express Route
-const studentRoute = require('../serveur-node/routes/student.route')
+const studentRoute = require('../serveur-mern-crud/routes/student.route')
 // Connecting mongoDB Database
 mongoose
-    .connect('mongodb://127.0.0.1:27017/crudMern')
+    .connect('mongodb+srv://larry109:toky221000@cluster0.lwrxn.mongodb.net/crudMern')
+    // .connect('mongodb://127.0.0.1:27017/crudMern')
     .then((x) => {
         console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
     })
